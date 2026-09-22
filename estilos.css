@@ -6,155 +6,357 @@
 
 body {
     min-height: 100vh;
-    background: linear-gradient(135deg, #fff8c5, #ffd966);
+
     font-family: Arial, sans-serif;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fffde7 0%,
+            #fff1a8 50%,
+            #ffd65a 100%
+        );
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    overflow: hidden;
 }
 
+
+/* CONTENEDOR PRINCIPAL */
+
 .contenedor {
-    width: 90%;
-    max-width: 850px;
-    padding: 40px;
+    width: 92%;
+    max-width: 1050px;
+
+    min-height: 700px;
+
+    padding: 45px 35px 30px;
 
     text-align: center;
 
-    background: rgba(255, 255, 255, 0.85);
-    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.78);
 
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border: 2px solid rgba(255, 193, 7, 0.35);
+
+    border-radius: 35px;
+
+    box-shadow:
+        0 25px 60px rgba(120, 80, 0, 0.18);
 }
+
+
+/* TITULO */
 
 h1 {
-    color: #d49a00;
-    font-size: 42px;
+    color: #b87900;
+
+    font-size: 46px;
+
     margin-bottom: 10px;
+
+    letter-spacing: 1px;
 }
+
+
+/* SUBTITULO */
 
 p {
     color: #795548;
+
     font-size: 18px;
-    margin-bottom: 40px;
+
+    margin-bottom: 25px;
 }
 
+
+/* JARDIN */
+
 .jardin {
+    height: 430px;
+
     display: flex;
+
     justify-content: center;
+
     align-items: flex-end;
-    gap: 50px;
+
+    gap: 25px;
 }
+
+
+/* FLOR */
 
 .flor {
     position: relative;
-    width: 130px;
-    height: 240px;
+
+    width: 220px;
+    height: 400px;
 }
+
+
+/* TAMAÑOS DE LAS FLORES */
+
+.flor-izquierda {
+    transform: scale(0.85) rotate(-4deg);
+}
+
+.flor-centro {
+    transform: scale(1.08);
+
+    z-index: 5;
+}
+
+.flor-derecha {
+    transform: scale(0.85) rotate(4deg);
+}
+
+
+/* CABEZA DE LA FLOR */
 
 .petalos {
     position: absolute;
-    width: 110px;
-    height: 110px;
-    left: 10px;
+
+    width: 210px;
+    height: 210px;
+
     top: 0;
+    left: 5px;
+
+    z-index: 4;
 }
+
+
+/* PETALOS */
 
 .petalo {
     position: absolute;
 
-    width: 45px;
-    height: 65px;
+    width: 70px;
+    height: 110px;
 
-    background: #ffd21f;
-    border-radius: 50%;
+    left: 70px;
+    top: 45px;
 
-    left: 33px;
-    top: 20px;
+    background:
+        linear-gradient(
+            180deg,
+            #fff06a 0%,
+            #ffd21f 55%,
+            #f2a900 100%
+        );
 
-    transform-origin: center bottom;
+    border-radius: 60% 60% 50% 50%;
+
+    transform-origin: 50% 90%;
+
+    box-shadow:
+        inset 0 -8px 12px rgba(190, 120, 0, 0.12),
+        0 5px 10px rgba(150, 90, 0, 0.12);
 }
 
+
+/* DISTRIBUCION DE PETALOS */
+
 .petalo:nth-child(1) {
-    transform: rotate(0deg) translateY(-25px);
+    transform: rotate(0deg) translateY(-52px);
 }
 
 .petalo:nth-child(2) {
-    transform: rotate(72deg) translateY(-25px);
+    transform: rotate(45deg) translateY(-52px);
 }
 
 .petalo:nth-child(3) {
-    transform: rotate(144deg) translateY(-25px);
+    transform: rotate(90deg) translateY(-52px);
 }
 
 .petalo:nth-child(4) {
-    transform: rotate(216deg) translateY(-25px);
+    transform: rotate(135deg) translateY(-52px);
 }
 
 .petalo:nth-child(5) {
-    transform: rotate(288deg) translateY(-25px);
+    transform: rotate(180deg) translateY(-52px);
 }
+
+.petalo:nth-child(6) {
+    transform: rotate(225deg) translateY(-52px);
+}
+
+.petalo:nth-child(7) {
+    transform: rotate(270deg) translateY(-52px);
+}
+
+.petalo:nth-child(8) {
+    transform: rotate(315deg) translateY(-52px);
+}
+
+
+/* CENTRO DE LA FLOR */
 
 .centro {
     position: absolute;
 
-    width: 40px;
-    height: 40px;
+    width: 78px;
+    height: 78px;
 
-    background: #8b5700;
+    left: 66px;
+    top: 66px;
+
     border-radius: 50%;
 
-    top: 35px;
-    left: 35px;
+    background:
+        radial-gradient(
+            circle at 25% 25%,
+            #b87300 3px,
+            transparent 4px
+        ),
+        radial-gradient(
+            circle at 70% 30%,
+            #5d3500 3px,
+            transparent 4px
+        ),
+        radial-gradient(
+            circle at 35% 70%,
+            #8a5000 3px,
+            transparent 4px
+        ),
+        radial-gradient(
+            circle at 75% 70%,
+            #5d3500 3px,
+            transparent 4px
+        ),
+        #704000;
 
-    z-index: 2;
+    background-size: 18px 18px;
+
+    box-shadow:
+        inset 0 5px 10px rgba(0, 0, 0, 0.25),
+        0 5px 10px rgba(90, 50, 0, 0.3);
+
+    z-index: 10;
 }
+
+
+/* TALLO */
 
 .tallo {
     position: absolute;
 
-    width: 10px;
-    height: 140px;
+    width: 16px;
+    height: 230px;
 
-    background: #4c9a35;
+    left: 102px;
+    top: 170px;
 
-    left: 60px;
-    top: 95px;
+    background:
+        linear-gradient(
+            90deg,
+            #2e7029,
+            #66ad45,
+            #2e7029
+        );
 
-    border-radius: 10px;
+    border-radius: 20px;
+
+    z-index: 1;
 }
+
+
+/* HOJAS */
 
 .hoja {
     position: absolute;
 
-    width: 60px;
-    height: 28px;
+    width: 105px;
+    height: 52px;
 
-    background: #65ad45;
+    background:
+        linear-gradient(
+            135deg,
+            #7ac653,
+            #347b2c
+        );
 
-    border-radius: 100% 0;
+    border-radius: 100% 0 100% 0;
 
-    top: 150px;
+    z-index: 3;
+}
+
+
+/* HOJA IZQUIERDA */
+
+.hoja.izquierda {
     left: 5px;
+    top: 270px;
 
     transform: rotate(-25deg);
 }
 
+
+/* HOJA DERECHA */
+
 .hoja.derecha {
-    left: 60px;
-    top: 175px;
+    left: 105px;
+    top: 315px;
 
     transform: rotate(25deg) scaleX(-1);
 }
 
-.flor-grande {
-    transform: translateY(-25px) scale(1.15);
+
+/* NERVADURA DE LAS HOJAS */
+
+.hoja::after {
+    content: "";
+
+    position: absolute;
+
+    width: 75px;
+    height: 3px;
+
+    left: 15px;
+    top: 25px;
+
+    background: #286526;
+
+    transform: rotate(10deg);
+
+    border-radius: 10px;
 }
 
-.mensaje {
-    margin-top: 20px;
 
-    color: #b47700;
+/* MENSAJE */
+
+.mensaje {
+    display: inline-block;
+
+    margin-top: 5px;
+
+    padding: 13px 28px;
+
+    color: #9b6500;
+
     font-size: 20px;
+
     font-weight: bold;
+
+    background: rgba(255, 220, 80, 0.35);
+
+    border-radius: 30px;
+
+    border: 1px solid rgba(190, 130, 0, 0.15);
+}
+
+
+/* EFECTO SUAVE */
+
+.flor-centro .petalo {
+    background:
+        linear-gradient(
+            180deg,
+            #fff37a 0%,
+            #ffd21f 55%,
+            #eea500 100%
+        );
 }
