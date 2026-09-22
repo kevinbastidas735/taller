@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fff8c5, #ffd966);
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 850px;
+    padding: 40px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 25px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    color: #d49a00;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #795548;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.jardin {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 50px;
+}
+
+.flor {
+    position: relative;
+    width: 130px;
+    height: 240px;
+}
+
+.petalos {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 10px;
+    top: 0;
+}
+
+.petalo {
+    position: absolute;
+
+    width: 45px;
+    height: 65px;
+
+    background: #ffd21f;
+    border-radius: 50%;
+
+    left: 33px;
+    top: 20px;
+
+    transform-origin: center bottom;
+}
+
+.petalo:nth-child(1) {
+    transform: rotate(0deg) translateY(-25px);
+}
+
+.petalo:nth-child(2) {
+    transform: rotate(72deg) translateY(-25px);
+}
+
+.petalo:nth-child(3) {
+    transform: rotate(144deg) translateY(-25px);
+}
+
+.petalo:nth-child(4) {
+    transform: rotate(216deg) translateY(-25px);
+}
+
+.petalo:nth-child(5) {
+    transform: rotate(288deg) translateY(-25px);
+}
+
+.centro {
+    position: absolute;
+
+    width: 40px;
+    height: 40px;
+
+    background: #8b5700;
+    border-radius: 50%;
+
+    top: 35px;
+    left: 35px;
+
+    z-index: 2;
+}
+
+.tallo {
+    position: absolute;
+
+    width: 10px;
+    height: 140px;
+
+    background: #4c9a35;
+
+    left: 60px;
+    top: 95px;
+
+    border-radius: 10px;
+}
+
+.hoja {
+    position: absolute;
+
+    width: 60px;
+    height: 28px;
+
+    background: #65ad45;
+
+    border-radius: 100% 0;
+
+    top: 150px;
+    left: 5px;
+
+    transform: rotate(-25deg);
+}
+
+.hoja.derecha {
+    left: 60px;
+    top: 175px;
+
+    transform: rotate(25deg) scaleX(-1);
+}
+
+.flor-grande {
+    transform: translateY(-25px) scale(1.15);
+}
+
+.mensaje {
+    margin-top: 20px;
+
+    color: #b47700;
+    font-size: 20px;
+    font-weight: bold;
+}
